@@ -48,11 +48,13 @@ svg {
 	}
 }
 
-.title {	
-	font-size: 46px;
-	line-height: 1.3;
+.title {
+	text-align: center;
+	color: #000000;
+	font-size: 40px;
+	line-height: 1.2;
+	font-weight: 900;
 	@include r(1219){
-		font-size: 42px;
 	}
 	@include r(1023){	
 		font-size: 36px;
@@ -81,24 +83,9 @@ svg {
 	white-space: nowrap;
 }
 
-.section {
-	position: relative;
-}
-
-.section:after {
-	content: "";
-	position: absolute;
-	background: url("../img/line__after-section.png") no-repeat;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 150px;
-	background-position-x: center;
-}
-
 .form {
 	position: relative;
-	width: 260px;
+	width: 264px;
 	margin: 0 auto;
 	z-index: auto;
 	flex: none;
@@ -111,6 +98,7 @@ svg {
 	content: "";
 	position: absolute;
 	background: url("../img/form-arrow.png") no-repeat center;
+	background-size: contain;
 	top: 103px;
 	right: -31px;
 	width: 43px;
@@ -142,12 +130,12 @@ svg {
 	line-height: 1.1;
 	font-weight: 500;
 	text-align: center;
-	margin-bottom: 15px
+	margin-bottom: 10px
 }
 
 .form-title_orange {
 	white-space: nowrap;
-	color: #c6637b
+	color: #ff7300;
 }
 
 .price, .price-item {
@@ -196,6 +184,7 @@ svg {
 }
 
 .price-content_old {
+	position: relative;
 	color: #a2a1a1
 }
 
@@ -217,22 +206,22 @@ svg {
 	line-height: 1
 }
 
-.x_price_previous:after, .x_price_previous:before {
+.price-content_old:after, .price-content_old:before {
 	content: "";
 	position: absolute;
-	left: 0;
+	left: 50%;
 	bottom: 13px;
-	width: 100%;
+	width: 80%;
 	height: 2px;
 	background: #f57373
 }
 
-.x_price_previous:before {
-	transform: rotate(20deg)
+.price-content_old:before {
+	transform: translateX(-50%) rotate(10deg)
 }
 
-.x_price_previous:after {
-	transform: rotate(-20deg)
+.price-content_old:after {
+	transform: translateX(-50%) rotate(-10deg)
 }
 
 .x_price_current {
@@ -252,7 +241,7 @@ svg {
 .form__lastpack {
 	color: #000;
 	font-size: 16px;
-	line-height: 1.2;
+	line-height: 1;
 	font-weight: 500;
 	max-width: 150px;
 	text-align: center;
@@ -264,7 +253,7 @@ svg {
 }
 
 .form-content {
-	padding: 35px 20px 0
+	padding: 44px 20px 0
 }
 
 .input-box {
@@ -345,7 +334,7 @@ svg {
 }
 
 .form-button {
-	min-height: 70px
+	min-height: 65px
 }
 
 .button__text-1, .button__text-2 {
@@ -447,7 +436,6 @@ svg {
 
 
 .home__form-wrap {
-	width: 264px;
 	padding: 30px 20px 25px;
 	margin: 0 0 0 auto;
 }
@@ -476,7 +464,6 @@ svg {
 .home__form-wrap .form-title {
 	font-weight: 700;
 	line-height: 1;
-	margin-bottom: 10px
 }
 
 .home__form-wrap .form-header {
@@ -513,7 +500,6 @@ svg {
 }
 
 .last-section__form {
-	margin: 0 20px
 }
 
 .product-box {
@@ -526,6 +512,35 @@ svg {
 	right: 27%;
 }
 
+.title__product-name {
+	color: #b62e60;
+	text-transform: uppercase;
+	font-weight: inherit;
+}
+
+.section_color {
+	position: relative;
+	background: linear-gradient(to right, #f3dce6 0%, #fcf4dc 100%);
+}
+
+.section_color:before {
+	content: "";
+	background: url("../img/home-city.png") no-repeat center top;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform: scale(-1,1);
+}
+
+.section_color:nth-child(2n) {
+	background: linear-gradient(to right, #fcf4dc 0%, #f3dce6 100%);
+}
+
+.section_color:nth-child(2n):before {
+	transform: none;
+}
 
 @media screen and (max-width: 1299px){
 	.form:after {

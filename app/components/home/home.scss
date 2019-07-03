@@ -6,12 +6,23 @@
 
 .home:before {
   content: "";
-  background: url("../img/home-city.png") no-repeat center top, url("../img/grass.png") no-repeat center bottom 10px;
+  background: url("../img/home-city.png") no-repeat center top, url("../img/grass.png") no-repeat center bottom 10px, url("../img/home__bg-light.png") no-repeat center center;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
   position: absolute;
+}
+
+.home:after {
+  content: "";
+  position: absolute;
+  background: url("../img/line__after-section.png") no-repeat;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background-position-x: center;
 }
 
 .header {
@@ -193,7 +204,7 @@
 .home-list__conclusion:before {
   content: "";
   position: absolute;
-  background-color: #f6e8dd;
+  background-color: #fdfaf7;
   width: 15px;
   height: 15px;
   left: -1px;
