@@ -1,0 +1,219 @@
+.composition-cont{
+    padding: 80px 0;
+    & .title{
+        max-width: 650px;
+        margin: 0 auto;
+    }
+}
+
+.composition{
+    margin-top: 75px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;    
+    &_margin{
+        margin-top: 70px;
+    }
+    &__img{
+        width: 40%;
+        position: relative;
+        flex-shrink: 0;
+        & .img{
+            width: 100%;
+            display: block;
+        }
+    }
+    &__arrow{
+        position: absolute;
+        bottom: -85px;
+        right: -226px;
+        &.two{
+            right: auto;
+            left: -227px;
+        }
+        &.three{
+            bottom: -98px;
+            right: -216px;
+        }
+        &.four{
+            right: auto;
+            left: -215px;
+            bottom: -97px;
+        }
+        &.fife{
+            right: -89px;
+        }
+    }
+    &__pos{
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 2px solid #ffad2f;
+        top: -15px;
+        right: -18px;
+        & img{
+            width: 100%;
+            display: block;
+        }
+    }
+    &__cont{
+        width: 60%;
+        padding-left: 42px;
+        
+    }
+    &__title{
+        color: #000000;
+        font-size: 26px;
+        font-weight: bold;
+        & span{
+            font-size: 50px;
+            color: #e5e5e5;
+        }
+    }
+    &__description{
+        color: #444444;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 20px;
+        line-height: 1.5;
+        &_weight{
+            font-weight: bold;
+            color: #000000;
+        }
+    }
+    &:nth-child(2n-1){
+        flex-direction: row-reverse;
+        
+        & .composition__cont{
+            padding-left: 0;
+            padding-right: 42px;
+        }
+
+        & .composition__pos{
+            right: auto;
+            left: -18px;
+        }
+    }
+    &_btn{
+        max-width: 310px;
+        display: flex;
+        flex-direction: row;
+        padding: 20px 0; 
+        font-size: 27px;
+        color: #fff;
+        font-weight: 700;
+        margin: 85px auto 0; 
+    }
+}
+
+@include r(1219){
+    .composition__description{
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    .composition__arrow{
+        &.one{
+            width: 199px;
+            right: -198px;
+            bottom: -72px;
+        }
+        &.two{
+            left: -191px;
+            width: 270px;
+            bottom: -80px;
+        }
+        &.three{
+            bottom: -86px;
+            right: -184px;
+            width: 186px;
+        }
+        &.four{
+            right: auto;
+            left: -186px;
+            bottom: -83px;
+            width: 188px;
+        }
+    }
+
+}
+
+@include r(1023){
+    .composition-cont{
+        padding: 40px 0;
+    }
+    .composition{
+        margin-top: 25px;
+        &__arrow{
+            display: none;
+        }
+    }
+    .composition_margin{
+        margin-top: 30px;
+    }
+    .composition__cont{
+        padding-left: 20px;
+    }
+    .composition:nth-child(2n-1) .composition__cont{
+        padding-right: 20px;
+    }
+    .composition__title{
+        font-size: 21px;
+        & span{
+            font-size: 30px;
+        }
+    }
+    .composition__description{
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .composition__pos{
+        width: 60px;
+        height: 60px;
+        top: -13px;
+        right: -13px;
+    }
+    .composition_btn{
+        margin-top: 45px;
+    }
+}
+
+@include r(767){
+    .composition-cont{
+        padding: 30px 0;
+    }
+    .composition{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+    }
+    .composition:nth-child(2n-1){
+        flex-direction: column;
+    }
+    .composition__cont{
+        width: 100%;
+        padding: 0;
+        margin-top: 10px;
+    }
+    .composition__img{
+        max-width: 300px;
+        width: 100%;
+    }
+    .composition__pos{
+        right: -3px;
+    }
+    .composition:nth-child(2n-1) .composition__pos{
+        left: -3px;
+    }
+    .composition_btn{
+        margin-top: 25px
+    }
+}
+
+@include r(639px){
+    .composition-cont{
+        padding: 25px 0;
+    }
+}
