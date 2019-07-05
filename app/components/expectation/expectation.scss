@@ -1,7 +1,15 @@
+.expectation {
+    padding: 40px 0 80px;
+}
+
 .tittle_expectation {
     max-width: 780px;
     margin: 0 auto 15px;
     text-align: center;
+
+    @include r(1023) {
+        margin: 0 auto 10px;
+    }
 }
 
 .expectation__subtitle {
@@ -11,6 +19,22 @@
     font-size: 22px;
     line-height: 28px;
     color: #444;
+
+    @include r(1023) {
+        margin: 0 auto 60px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    @include r(767) {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    @include r(479) {
+        font-size: 17px;
+        line-height: 20px;
+    }
 }
 
 .expectation__subtitle-accent {
@@ -18,8 +42,18 @@
 }
 
 .expectation__wrap {
+    margin-bottom: 40px;
     padding: 0 40px 40px;
     border: 3px solid #e2c9b2;
+
+    @include r(1023) {
+        margin-bottom: 25px;
+        padding: 0 25px 25px;
+    }
+
+    @include r(1023) {
+        margin-bottom: 20px;
+    }
 }
 
 .expectation__products {
@@ -32,17 +66,37 @@
     margin: -35px auto 40px;
     padding: 0 40px;
     background-color: #fff;
+
+    @include r(767) {
+        max-width: 530px;
+        margin: -35px auto 20px;
+        padding: 0 25px;
+    }
+
+    @include r(639) {
+        flex-direction: column;
+        max-width: 300px;
+    }
 }
 
 .expectation__product {
     display: flex;
     flex-direction: column;
     min-height: 230px;
+
+    @include r(639) {
+        min-height: auto;
+    }
 }
 
 .expectation__product-pack {
     max-width: 135px;
     flex-grow: 1;
+
+    @include r(639) {
+        flex-grow: 0;
+        margin-bottom: 10px;
+    }
 }
 
 .expectation__product-img {
@@ -54,11 +108,26 @@
     font-size: 24px;
     line-height: 26px;
     font-weight: 500;
+
+    @include r(767) {
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    @include r(479) {
+        font-size: 20px;
+        line-height: 22px;
+    }
 }
 
 .expectation__middle {
     position: relative;
     padding: 0 60px;
+
+    @include r(639) {
+        margin: 20px 0;
+        padding: 0;
+    }
 
     &::before,
     &::after {
@@ -70,6 +139,10 @@
         width: 46px;
         height: 12px;
         background: url('../img/arrow-long.png') 0 0 no-repeat;
+
+        @include r(639) {
+            display: none;
+        }
     }
 
     &::before {
@@ -150,12 +223,36 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 45px;
+
+    @include r(1023) {
+        margin-top: 35px;
+    }
+
+    @include r(767) {
+        flex-direction: column;
+        margin-top: 30px;
+    }
 }
 
 .expectation__minus {
     position: relative;
     width: 30%;
     padding-left: 58px;
+
+    &:not(:last-child) {
+
+        @include r(767) {
+            margin-bottom: 20px;
+        }
+    }
+
+    @include r(1023) {
+        padding-left: 35px;
+    }
+
+    @include r(767) {
+        width: 100%;
+    }
 }
 
 .expectation__minus-bullet {
@@ -170,12 +267,21 @@
     border-radius: 50%;
     background-color: #ff1110;
 
+    @include r(1023) {
+        width: 25px;
+        height: 25px;
+    }
+
     &::before {
         content: '+';
         font-size: 35px;
         font-weight: 100;
         color: #fff;
         transform: rotate(45deg);
+
+        @include r(1023) {
+            font-size: 25px;
+        }
     }
 }
 
@@ -184,9 +290,108 @@
     line-height: 22px;
     font-weight: 400;
     color: #444;
+
+    @include r(1023) {
+        font-size: 17px;
+        line-height: 19px;
+    }
 }
 
 .expectation__minus-desc_accent {
     font-weight: 500;
     color: #000;
+}
+
+.expectation__footnote-pic {
+    max-width: 105px;
+    margin: 0 auto 15px;
+
+    @include r(767) {
+        margin: 0 auto 10px;
+    }
+}
+
+.expectation__footnote-img {
+    display: block;
+}
+
+.expectation__footnote-title {
+    max-width: 460px;
+    margin: 0 auto 10px;
+    text-align: center;
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 700;
+
+    @include r(1023) {
+        margin: 0 auto 5px;
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    @include r(767) {
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    @include r(479) {
+        font-size: 20px;
+        line-height: 22px;
+    }
+}
+
+.expectation__footnote-title-accent {
+    color: #b62e60;
+}
+
+.expectation__footnote-subtitle {
+    max-width: 870px;
+    margin: 0 auto 55px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 28px;
+    color: #444;
+
+    @include r(1023) {
+        margin: 0 auto 40px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    @include r(767) {
+        margin: 0 auto 30px;
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    @include r(479) {
+        margin: 0 auto 25px;
+        font-size: 16px;
+    }
+}
+
+.expectation__footnote-subtitle-accent {
+    font-weight: 500;
+    color: #000;
+}
+
+.scroll-bottom-btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #ff9b00;
+    cursor: pointer;
+
+    &:hover {
+
+        .scroll-bottom-btn__img {
+            transform: translateY(3px);
+        }
+    }
+}
+
+.scroll-bottom-btn__img {
+    transition: .3s;
 }

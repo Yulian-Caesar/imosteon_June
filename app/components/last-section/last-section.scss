@@ -1,6 +1,21 @@
+.last-section {
+  padding: 175px 0 0 0;
+  background: url("../img/home-city.png") no-repeat center top 50px, url("../img/grass.png") no-repeat center bottom 10px, url("../img/home__bg-light.png") no-repeat center center, linear-gradient(to right, #fcf4dc 0%, #f3dce6 100%);
+}
+
 .last-section .home-box {
   display: flex;
   padding-bottom: 133px;
+}
+
+.last-section.home:before {
+  content: "";
+  background: url("../img/line__before-section.png") no-repeat center top;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .last-section .home__title-box {
@@ -32,6 +47,10 @@
 }
 
 @media screen and (max-width: 1023px){
+  .last-section.home {
+    background: url("../img/home-city.png") no-repeat center top 50px, url("../img/home__bg-light.png") no-repeat center center, linear-gradient(to right, #fcf4dc 0%, #f3dce6 100%);
+  }
+
   .last-section .home-box {
     flex-wrap: wrap;
     padding: 0;
@@ -53,6 +72,10 @@
 
   .last-section .home-list {
     margin-bottom: 20px;
+  }
+
+  .last-section.home:before {
+    display: none;
   }
 
 }

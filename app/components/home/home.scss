@@ -1,24 +1,14 @@
 .home {
     position: relative;
-    background: linear-gradient(to right, #fcf4dc 0%, #f3dce6 100%);
+    background: url("../img/home-city.png") no-repeat center top, url("../img/grass.png") no-repeat center bottom 10px, url("../img/home__bg-light.png") no-repeat center center, linear-gradient(to right, #fcf4dc 0%, #f3dce6 100%);
     padding: 50px 0 0;
     margin-bottom: 40px;
-}
-
-.home:before {
-  content: "";
-  background: url("../img/home-city.png") no-repeat center top, url("../img/grass.png") no-repeat center bottom 10px, url("../img/home__bg-light.png") no-repeat center center;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
 }
 
 .home:after {
   content: "";
   position: absolute;
-  background: url("../img/line__after-section.png") no-repeat;
+  background: url("../img/line__after-section.png") no-repeat center top;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -272,7 +262,7 @@
     bottom: 20px;
   }
 
-  .product-box__pills {
+  .home .product-box__pills {
     width: 90px;
   }
 
@@ -345,10 +335,6 @@
         bottom: 20px;
     }
 
-    .product-box__pills {
-        width: 90px;
-    }
-
     .home-list {
         margin: 0 20px 0 0;
     }
@@ -365,7 +351,8 @@
 
 @media screen and (max-width: 1023px) {
     .home {
-        padding: 25px 0 40px;
+      padding: 25px 0 40px;
+      background: url("../img/home-city.png") no-repeat center top, url("../img/home__bg-light.png") no-repeat center center, linear-gradient(to right, #fcf4dc 0%, #f3dce6 100%);
     }
 
     .home:before {
