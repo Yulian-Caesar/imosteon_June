@@ -1,5 +1,5 @@
 .expectation {
-    padding: 40px 0 80px;
+    padding: 40px 0 0;
 }
 
 .tittle_expectation {
@@ -376,7 +376,10 @@
 }
 
 .scroll-bottom-btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
     width: 50px;
     height: 50px;
     margin: 0 auto;

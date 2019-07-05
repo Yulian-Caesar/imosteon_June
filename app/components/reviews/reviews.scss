@@ -1,5 +1,5 @@
 .reviews {
-  padding: 225px 0;
+  padding: 200px 0 170px;
 }
 
 .reviews-title {
@@ -234,7 +234,7 @@
 
 @media screen and (max-width: 1219px){
   .reviews {
-    padding: 60px 0;
+    padding: 120px 0;
   }
 
   .reviews-slider .slider-for  {
@@ -243,6 +243,7 @@
   }
 
   .reviews-slider .reviews-slider__nav-box {
+    width: 142px;
     margin-right: 15px;
   }
 
